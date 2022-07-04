@@ -7,16 +7,20 @@ def main_page(request):
     return render(request, 'testenglish/Главная.html', {})
 
 
+def main_test(request):
+    return HttpResponse('Главный тест на определение уровня знаний')
+
+
 def help_page(request):
     return render(request, 'testenglish/Помощь.html', {})
 
 
 def login(request):
-    return HttpResponse('Вход')
+    return render(request, 'testenglish/Вход.html', {})
 
 
 def register(request):
-    return HttpResponse('Регистрация')
+    return render(request, 'testenglish/Регистрация.html', {})
 
 
 def tests_page(request):
@@ -25,17 +29,17 @@ def tests_page(request):
 
 def test_button_A(request):
     # аналогичная работа как в main_page
-    return render(request, 'testenglish/ТестA.html', {})
+    return HttpResponse('Тест А(А1/A2)')
 
 
 def test_button_B(request):
     # аналогичная работа как в main_page
-    return render(request, 'testenglish/ТестB.html', {})
+    return HttpResponse('Тест B(B1/B2)')
 
 
 def test_button_C(request):
     # аналогичная работа как в main_page
-    return render(request, 'testenglish/ТестC.html', {})
+    return HttpResponse('Тест C(C1/C2)')
 
 
 def pageNotFound(request, exception):
