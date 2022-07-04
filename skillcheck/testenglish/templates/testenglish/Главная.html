@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Maket MAIN</title>
+    <title>Maket Index</title>
     <style>
         table {
             width: 100%;
@@ -32,32 +32,78 @@
             text-align: center;
             padding:5px;
         }
+        span {
+        font-size: 20px;
+        color: red;
+        }
+
     </style>
 </head>
 <body>
-  <table border="0">
+<table border="0">
     <tr>
-      <td colspan="2" class="header"><h1>site header</h1></td>
+        <td colspan="2" class="header"><h1>site header: English skill-check</h1></td>
     </tr>
     <tr>
-      <td class="sidebar">
-        <b>main menu</b>
-            <ul>
-                <input type="submit" value="main button">
-                    <br></br>
-                <input type="submit" value="test button">
-                <br></br>
-                <input type="submit" value="help button">
-                <br></br>
-                <input type="submit" value="join\register button">
-            </ul>
-      </td>
-      <td class="article">main content about english test skill-check</td>
+        <td class="sidebar">
+            <b>main menu</b>
+            <br/>
+            <br/>
+            <br/>
+            <form action="{% url 'main_page' %}" method="get">
+                <input type="submit" value="main button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'tests_page' %}" method="get">
+                <input type="submit" value="test button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'help_page' %}" method="get">
+                <input type="submit" value="help button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'login' %}" method="get">
+                <input type="submit" value="login button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'register' %}" method="get">
+                <input type="submit" value="register button"/>
+            </form>
+        </td>
+        <td class="article">
+            <div>
+                <h2>
+                    SOME Article about English skill-check
+                </h2>
+                <span>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias cupiditate deserunt dicta eius ex, expedita explicabo magnam neque quas quos sapiente sit! Culpa distinctio eligendi modi ratione sequi soluta?
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores aspernatur consectetur consequuntur, debitis delectus dicta, ducimus fugiat harum iusto laborum laudantium nesciunt nostrum officiis quod quos rem similique sint.
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur blanditiis doloribus ea, eos fugiat fugit illum ipsam nulla perspiciatis quaerat qui quidem temporibus tenetur ut velit vero voluptate voluptates. Culpa.
+             <br/>
+             </span>
+                <img src="img/.jpg" alt="Here will be some picture in tne future...">
+                <div>
+                    <p>
+                        Test yourself (some test)
+                    </p>
+                    <img src="img/.jpg" alt="Here will be some picture in tne future...">
+                    <br/>
+                    <br/>
+                    <form action="{% url 'test_yourself' %}" method="get">
+                        <input type="submit" value="test yourself button"/>
+                    </form>
+                </div>
+            </div>
+        </td>
     </tr>
 
     <tr>
-      <td colspan="2" class="footer">Skill Check © 2022 kpfu.ru</td>
+        <td colspan="2" class="footer">Skill Check © 2022 kpfu.ru</td>
     </tr>
-  </table>
+</table>
 </body>
 </html>
