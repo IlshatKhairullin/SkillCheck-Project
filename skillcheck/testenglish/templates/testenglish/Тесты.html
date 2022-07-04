@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maket Test</title>
+    <style>
+        table {
+            width: 100%;
+            border: 0;
+        }
+        td.header {
+            background-color: #b5dcb3;
+        }
+        td.sidebar {
+            background-color: #dddddd;
+            width: 30%;
+            vertical-align: top;
+            padding:5px;
+        }
+        td.sidebar>ul {
+            list-style: none;
+            padding:5px;
+        }
+        td.article {
+            background-color: #eeeeee;
+            height: 200px;
+            width: 70%;
+            vertical-align: top;
+            padding:5px;
+        }
+        td.footer {
+            background-color: #b5dcb3;
+            text-align: center;
+            padding:5px;
+        }
+        li {
+        font-size: 20px;
+        color: blue;
+        }
+
+    </style>
+</head>
+<body>
+<table border="0">
+    <tr>
+        <td colspan="2" class="header"><h1>site header: English skill-check</h1></td>
+    </tr>
+    <tr>
+        <td class="sidebar">
+            <b>main menu</b>
+            <br/>
+            <br/>
+            <br/>
+            <form action="{% url 'main_page' %}" method="get">
+                <input type="submit" value="main button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'tests_page' %}" method="get">
+                <input type="submit" value="test button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'help_page' %}" method="get">
+                <input type="submit" value="help button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'login' %}" method="get">
+                <input type="submit" value="login button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'register' %}" method="get">
+                <input type="submit" value="register button"/>
+            </form>
+        </td>
+        <td class="article">
+            <ul>
+                <li>Test 1
+                    <div>
+                        <input type="submit" value="Test 1 start"/>
+                    </div>
+                </li>
+                <li>Test 2
+                    <div>
+                        <input type="submit" value="Test 2 start"/>
+                    </div>
+                </li>
+                <li>Test 2
+                    <div>
+                        <input type="submit" value="Test 3 start"/>
+                    </div>
+                </li>
+            </ul>
+            <ol>
+                <li>text about test 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti labore maxime
+                    non sequi sunt! Architecto laudantium sint unde. Animi aut corporis enim fugit illo impedit
+                    perspiciatis placeat praesentium quibusdam sunt.
+                </li>
+                <li>text about test 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque deleniti dolore
+                    eaque earum excepturi facilis in magnam nostrum, quisquam saepe? Accusamus debitis deleniti dicta,
+                    dolor laboriosam non pariatur saepe sint.
+                </li>
+                <li>text about test 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur
+                    ducimus eveniet fugit laudantium nam placeat qui. Atque consectetur eveniet inventore molestias
+                    placeat, possimus quasi rem reprehenderit sint soluta, unde.
+                </li>
+            </ol>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="footer">Skill Check © 2022 kpfu.ru</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maket Register</title>
+    <style>
+        table {
+            width: 100%;
+            border: 0;
+        }
+        td.header {
+            background-color: #b5dcb3;
+        }
+        td.sidebar {
+            background-color: #dddddd;
+            width: 30%;
+            vertical-align: top;
+            padding:5px;
+        }
+        td.sidebar>ul {
+            list-style: none;
+            padding:5px;
+        }
+        td.article {
+            background-color: #eeeeee;
+            height: 200px;
+            width: 70%;
+            vertical-align: top;
+            padding:5px;
+        }
+        td.footer {
+            background-color: #b5dcb3;
+            text-align: center;
+            padding:5px;
+        }
+
+    </style>
+</head>
+<body>
+<table border="0">
+    <tr>
+        <td colspan="2" class="header"><h1>site header: English skill-check</h1></td>
+    </tr>
+    <tr>
+        <td class="sidebar">
+            <b>main menu</b>
+            <br/>
+            <br/>
+            <br/>
+            <form action="{% url 'main_page' %}" method="get">
+                <input type="submit" value="main button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'tests_page' %}" method="get">
+                <input type="submit" value="test button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'help_page' %}" method="get">
+                <input type="submit" value="help button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'login' %}" method="get">
+                <input type="submit" value="login button"/>
+            </form>
+            <br/>
+            <br/>
+            <form action="{% url 'register' %}" method="get">
+                <input type="submit" value="register button"/>
+            </form>
+        </td>
+        <td class="article">
+            <form action="#" method="post">
+                <div>
+                    <h1>
+                        Registration
+                    </h1>
+                    <p>Login: <input name="userlogin" placeholder="input your login" type="text"></p>
+                    <p>Email: <input name="useremail" placeholder="input your email" type="text"></p>
+                    <p>Password: <input name="userpasswordfirst" placeholder="input your password" type="password"></p>
+                    <p>Password: <input name="userpasswordsecond" placeholder="input your password" type="password"></p>
+                </div>
+                <div>
+                    <p>Registration me !</p>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="footer">Skill Check © 2022 kpfu.ru</td>
+    </tr>
+</table>
+</body>
+</html>
