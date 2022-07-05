@@ -45,4 +45,4 @@ def test_button_C(request):
 
 
 def pageNotFound(request, exception):
-    return HttpResponseNotFound('<h1>Страница не найдена</h1>')
+    return render(request, 'testenglish/NotFound.html')
