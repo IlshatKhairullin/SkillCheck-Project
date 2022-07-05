@@ -76,21 +76,9 @@
         </td>
         <td class="article">
             <ul>
-                <li>Test 1
-                    <div>
-                        <input type="submit" value="Test 1 start"/>
-                    </div>
-                </li>
-                <li>Test 2
-                    <div>
-                        <input type="submit" value="Test 2 start"/>
-                    </div>
-                </li>
-                <li>Test 2
-                    <div>
-                        <input type="submit" value="Test 3 start"/>
-                    </div>
-                </li>
+                <li><a href="{% url 'test_button_A' %}">Link on test 1</a></li>
+                <li><a href="{% url 'test_button_B' %}">Link on test 2</a></li>
+                <li><a href="{% url 'test_button_C' %}">Link on test 3</a></li>
             </ul>
             <ol>
                 <li>text about test 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti labore maxime
