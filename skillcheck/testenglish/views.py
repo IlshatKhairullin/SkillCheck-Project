@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound
+from .models import *
 
 
 def main_page(request):
@@ -8,7 +9,8 @@ def main_page(request):
 
 
 def main_test(request):
-    return HttpResponse('Главный тест на определение уровня знаний')
+    # questions = Questions.objects.all()
+    return render(request, 'testenglish/FirstTest.html',)  # {'questions': questions})
 
 
 def help_page(request):
