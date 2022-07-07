@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 class Test(models.Model):
     title = models.CharField(max_length=255)
     type_test = models.CharField(max_length=255)
@@ -18,6 +17,7 @@ class Question(models.Model):
     answer3 = models.CharField(max_length=255)
     answer4 = models.CharField(max_length=255)
     correct_answer = models.CharField(max_length=255)
+    order = models.IntegerField(null=True)
     category = models.CharField(max_length=255, null=True)
 
 
