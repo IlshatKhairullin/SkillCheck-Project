@@ -1,94 +1,117 @@
-<!DOCTYPE html>
+{% load static %}
+
 <html>
 <head>
-    <title>Maket Register</title>
-    <style>
-        table {
-            width: 100%;
-            border: 0;
-        }
-        td.header {
-            background-color: #b5dcb3;
-        }
-        td.sidebar {
-            background-color: #dddddd;
-            width: 30%;
-            vertical-align: top;
-            padding:5px;
-        }
-        td.sidebar>ul {
-            list-style: none;
-            padding:5px;
-        }
-        td.article {
-            background-color: #eeeeee;
-            height: 200px;
-            width: 70%;
-            vertical-align: top;
-            padding:5px;
-        }
-        td.footer {
-            background-color: #b5dcb3;
-            text-align: center;
-            padding:5px;
-        }
-
-    </style>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Skill-Check Login</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
-<table border="0">
-    <tr>
-        <td colspan="2" class="header"><h1>site header: English skill-check</h1></td>
-    </tr>
-    <tr>
-        <td class="sidebar">
-            <b>main menu</b>
-            <br/>
-            <br/>
-            <br/>
-            <form action="{% url 'main_page' %}" method="get">
-                <input type="submit" value="main button"/>
-            </form>
-            <br/>
-            <br/>
-            <form action="{% url 'tests_page' %}" method="get">
-                <input type="submit" value="test button"/>
-            </form>
-            <br/>
-            <br/>
-            <form action="{% url 'help_page' %}" method="get">
-                <input type="submit" value="help button"/>
-            </form>
-            <br/>
-            <br/>
-            <form action="{% url 'login' %}" method="get">
-                <input type="submit" value="login button"/>
-            </form>
-            <br/>
-            <br/>
-            <form action="{% url 'register' %}" method="get">
-                <input type="submit" value="register button"/>
-            </form>
-        </td>
-        <td class="article">
-            <form action="#" method="post">
-                <div>
-                    <h1>
-                        Join
-                    </h1>
-                    <p>Login: <input name="userlogin" placeholder="input your login" type="text"></p>
-                    <p>Password: <input name="userpasswordfirst" placeholder="input your password" type="password"></p>
-                </div>
-                <div>
-                    <p>Welcome Back</p>
-                    <button type="submit">join now !</button>
-                </div>
-            </form>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" class="footer">Skill Check © 2022 kpfu.ru</td>
-    </tr>
-</table>
+<div id="wrapper">
+    <header>
+        <a href="/"><img src="{% static 'images/footer-logo.jpg' %}" alt="Whitesquare logo"></a>
+
+    </header>
+    <nav>
+        <ul class="top-menu">
+            <li class="active">MENU</li>
+            <li><a href="{% url 'main_page' %}">HOME</a></li>
+            <li><a href="{% url 'help_page' %}">HELP</a></li>
+            <li><a href="{% url 'tests_page' %}">TESTS</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+        </ul>
+    </nav>
+    <div id="heading">
+        <h1>Login page</h1>
+    </div>
+    <aside>
+        <nav>
+            <ul class="aside-menu">
+                <li class="active">Links on ours Tests</li>
+                <li><a href="{% url 'tests_by_level' level=1 %}">Link on test 1</a></li>
+                <li><a href="{% url 'tests_by_level' level=2 %}">Link on test 2</a></li>
+                <li><a href="{% url 'tests_by_level' level=3 %}">Link on test 3</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <section>
+        <h2>Login</h2>
+        <br/>
+        <div>
+            <nav>
+                <ul class="join-join">
+                    <li>@Вход@</li>
+                </ul>
+                <ul class="join-text">
+                    <li>Используете аккаунт Skill-Check</li>
+                </ul>
+                <form action="#" method="post">
+                    <input class="input-login" placeholder="     Введите свой логин " required name="login" type="text">
+                    <br/>
+                    <br/>
+                    <input class="input-password" placeholder="     Введите свой пароль " required name="password"
+                           type="password">
+                    <p class="join-remind   ">Забыли логин или пароль?<br/><a target="_blank" class="help-text"
+                                                                              href="https://sun9-53.userapi.com/impf/c849528/v849528779/dc8c8/hq2QUO9qHZI.jpg?size=800x450&quality=96&keep_aspect_ratio=1&background=000000&sign=c4a0895ac2da0b6fe1d3fef71af71156&type=video_thumb">Жми
+                        на меня!</a></p>
+                    <input id="join" class="input-join" type="submit" value="Вход" name="Вход">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </form>
+            </nav>
+        </div>
+    </section>
+
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<footer>
+    <div id="footer">
+        <div id="twitter">
+            <h3>TWITTER FEED</h3>
+            <time datetime="2012-10-23"><a href="#">5 july</a></time>
+            <p>In ultricies pellentesque massa a porta. Aliquam ipsum enim, hendrerit ut porta nec, ullamcorper et
+                nulla. In eget mi dui, sit amet scelerisque nunc. Aenean aug</p>
+        </div>
+        <div id="social">
+            <h3>SOCIAL NETWORKS</h3>
+            <a href="http://twitter.com/" class="social-icon twitter"></a>
+            <a href="http://facebook.com/" class="social-icon facebook"></a>
+            <a href="http://plus.google.com/" class="social-icon google-plus"></a>
+            <a href="http://vimeo.com/" class="social-icon-small vimeo"></a>
+            <a href="http://youtube.com/" class="social-icon-small youtube"></a>
+            <a href="http://flickr.com/" class="social-icon-small flickr"></a>
+            <a href="http://instagram.com/" class="social-icon-small instagram"></a>
+            <a href="/rss/" class="social-icon-small rss"></a>
+        </div>
+        <div id="footer-logo">
+            <a href="/"><img src="{% static 'images/footer-logo.jpg' %}" alt="Whitesquare logo"></a>
+            <p>Copyright &copy; 2022 Whitesquare.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
