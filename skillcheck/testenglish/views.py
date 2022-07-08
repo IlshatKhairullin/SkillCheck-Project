@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse
 from .models import *
 
 
@@ -9,8 +9,25 @@ def main_page(request):
 
 
 def main_test(request):
-    # questions = Questions.objects.all()
-    return render(request, 'testenglish/FirstTest.html',)  # {'questions': questions})
+    questions = Question.objects.all()
+    return render(request, 'testenglish/TestYourself.html', {'questions': questions})
+
+
+def test_yourself_result(request):
+    if request.method == 'GET':
+        k = 0
+        questions = Question.objects.filter(order__lt=16)
+        for j in dict(request.GET)['answer']:
+            for i in questions:
+                if i.correct_answer == j:
+                    k += 1
+                    break
+        if k <= 5:
+            return HttpResponse(f'Your english level - Elementary. Количество правильных ответов - {k}')
+        elif 5 < k <= 10:
+            return HttpResponse(f'Your english level - Intermediate. Количество правильных ответов - {k}')
+        else:
+            return HttpResponse(f'Your english level - Advanced. Количество правильных ответов - {k}')
 
 
 def help_page(request):
@@ -29,19 +46,14 @@ def tests_page(request):
     return render(request, 'testenglish/Тесты.html', {})
 
 
-def test_button_A(request):
-    # аналогичная работа как в main_page
-    return HttpResponse('Тест А(А1/A2)')
-
-
-def test_button_B(request):
-    # аналогичная работа как в main_page
-    return HttpResponse('Тест B(B1/B2)')
-
-
-def test_button_C(request):
-    # аналогичная работа как в main_page
-    return HttpResponse('Тест C(C1/C2)')
+def tests_by_level(request, level):
+    questions = Question.objects.all()
+    if level == 1:
+        return render(request, 'testenglish/Test-1.html', {'questions': questions})
+    elif level == 2:
+        return render(request, 'testenglish/Test-2.html', {'questions': questions})
+    elif level == 3:
+        return render(request, 'testenglish/Test-3.html', {'questions': questions})
 
 
 def pageNotFound(request, exception):
