@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Skill-Check Register</title>
+    <title>Skill-Check Test yorself</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,7 +27,7 @@
         </ul>
     </nav>
     <div id="heading">
-        <h1>Register page</h1>
+        <h1>Test yorself</h1>
     </div>
     <aside>
         <nav>
@@ -40,57 +40,41 @@
         </nav>
     </aside>
     <section>
-        <h2>Registration</h2>
-        <br/>
-        <div>
-            <nav>
-                <ul class="join-reg">
-                    <li>@Регистрация@</li>
-                </ul>
-                <ul class="join-text">
-                    <li>Создай свой аккаунт Skill-Check !</li>
-                </ul>
-                <form action="#" method="post">
-                    <input class="input-login" placeholder="     Введите свой логин " required name="login" type="text">
+        <blockquote>
+            <p id="quote">
+                &ldquo;Test yourself&rdquo;
+            </p>
+            <br>
+            {% for q in questions %}
+            {% if q.order > 30 %}
+            <form action="#" method="post">
+                <div>
+                    <p>{{q.text}}</p>
                     <br/>
+                    <input type="radio" id="choice1" name="answer" value="answer1">
+                    <label for="choice1">{{q.answer1}}</label>
                     <br/>
-                    <input class="input-mail" placeholder="     Введите свой email " required name="email" type="email">
+                    <input type="radio" id="choice2" name="answer" value="answer2">
+                    <label for="choice2">{{q.answer2}}</label>
                     <br/>
+                    <input type="radio" id="choice3" name="answer" value="answer3">
+                    <label for="choice3">{{q.answer3}}</label>
                     <br/>
-                    <input class="input-password" placeholder="     Введите свой пароль " required name="password"
-                           type="password">
-                    <br/>
-                    <br/>
-                    <input class="input-password" placeholder="     Повторите свой пароль " required name="password"
-                           type="password">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <input id="reg" class="input-reg" type="submit" value="Регистрация" name="Регистрация">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                </form>
-            </nav>
-        </div>
-    </section>
+                    <input type="radio" id="choice4" name="answer" value="answer4">
+                    <label for="choice4">{{q.answer4}}</label>
+                </div>
+            </form>
+            {% endif %}
+            {% endfor %}
+            <br/>
+            <div>
+                <br/>
+                <input type="submit" class="input-endt" id="end-test" name="endtest" value="Завершить тест">
+            </div>
+        </blockquote>
 
+    </section>
 </div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <footer>
     <div id="footer">
         <div id="twitter">
