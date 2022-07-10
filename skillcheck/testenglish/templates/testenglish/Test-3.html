@@ -42,35 +42,33 @@
     <section>
         <blockquote>
             <p id="quote">
-                &ldquo;Test yourself&rdquo;
+                &ldquo;Test C&rdquo;
             </p>
+            <br/>
             <br>
             {% for q in questions %}
-            {% if q.order > 30 %}
-            <form action="#" method="post">
+            {% if q.order > 29 %}
+            <form action="{% url 'tests_by_level_result' level=3 %}" method="get">
                 <div>
                     <p>{{q.text}}</p>
                     <br/>
-                    <input type="radio" id="choice1" name="answer" value="answer1">
+                    <input type="checkbox" id="choice1" name="answer" value="answer1">
                     <label for="choice1">{{q.answer1}}</label>
                     <br/>
-                    <input type="radio" id="choice2" name="answer" value="answer2">
+                    <input type="checkbox" id="choice2" name="answer" value="answer2">
                     <label for="choice2">{{q.answer2}}</label>
                     <br/>
-                    <input type="radio" id="choice3" name="answer" value="answer3">
+                    <input type="checkbox" id="choice3" name="answer" value="answer3">
                     <label for="choice3">{{q.answer3}}</label>
                     <br/>
-                    <input type="radio" id="choice4" name="answer" value="answer4">
+                    <input type="checkbox" id="choice4" name="answer" value="answer4">
                     <label for="choice4">{{q.answer4}}</label>
                 </div>
-            </form>
-            {% endif %}
-            {% endfor %}
-            <br/>
-            <div>
+                {% endif %}
+                {% endfor %}
                 <br/>
                 <input type="submit" class="input-endt" id="end-test" name="endtest" value="Завершить тест">
-            </div>
+            </form>
         </blockquote>
 
     </section>
