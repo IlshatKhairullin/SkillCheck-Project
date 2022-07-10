@@ -13,7 +13,7 @@
 <body>
 <div id="wrapper">
     <header>
-        <a href="/"><img src="{% static 'images/footer-logo.jpg' %}" alt="Whitesquare logo"></a>
+        <a href="/"><img src="{% static 'images/logo1.png' %}" alt="logo"></a>
 
     </header>
     <nav>
@@ -21,87 +21,85 @@
             <li class="active">MENU</li>
             <li><a href="{% url 'main_page' %}">HOME</a></li>
             <li><a href="{% url 'help_page' %}">HELP</a></li>
-            <li><a href="{% url 'tests_page' %}">TESTS</a></li>
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'tests_page' %}">TEST`S</a></li>
+            <li><a href="{% url 'login' %}">LOGIN</a></li>
+            <li><a href="{% url 'register' %}">REGISTER</a></li>
         </ul>
     </nav>
     <div id="heading">
-        <h1>Help page</h1>
+        <h1>HELP</h1>
     </div>
     <aside>
         <nav>
             <ul class="aside-menu">
-                <li class="active">Links on ours Tests</li>
-                <li><a href="{% url 'tests_by_level' level=1 %}">Link on test 1</a></li>
-                <li><a href="{% url 'tests_by_level' level=2 %}">Link on test 2</a></li>
-                <li><a href="{% url 'tests_by_level' level=3 %}">Link on test 3</a></li>
+                <li class="active">Links on ours Test`s</li>
+                <li><font face="Cinzel" size="3"><a href="{% url 'tests_by_level' level=1 %}">A LEVEL TEST</a></font>
+                </li>
+                <li><font face="Cinzel" size="3"><a href="{% url 'tests_by_level' level=2 %}">B LEVEL TEST</a></font>
+                </li>
+                <li><font face="Cinzel" size="3"><a href="{% url 'tests_by_level' level=3 %}">C LEVEL TEST</a></font>
+                </li>
             </ul>
         </nav>
-        <h2>COOL PHOTO</h2>
+        <h2>PHOTOS OF HELP</h2>
         <p>
-            <img src="{% static 'images/hacker.jpg' %}" width="230" height="180" alt="Our offices">
+            <img src="{% static 'images/help1.jpg' %}" width="230" height="180" alt="Our offices">
+        </p>
+        <br/>
+        <p>
+            <img src="{% static 'images/help2.jpg' %}" width="230" height="180" alt="Our offices">
         </p>
     </aside>
     <section>
-        <h2>Here will be useful information</h2>
+        <h2>Useful information</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non neque ac sem accumsan rhoncus ut ut
-            turpis. In hac habitasse platea dictumst. Proin eget nisi erat, et feugiat arcu. Duis semper porttitor
-            lectus, ac pharetra erat imperdiet nec. Morbi interdum felis nulla. Aenean eros orci, pellentesque sed
-            egestas vitae, auctor aliquam nisi. Nulla nec libero eget sem rutrum iaculis. Quisque in enim velit, at
-            dignissim est. Nulla ullamcorper, dolor ac pellentesque placerat, justo tellus gravida erat, vel porttitor
-            libero erat condimentum metus. Donec sodales aliquam orci id suscipit. Proin sed risus sit amet massa
-            ultrices laoreet quis a erat. Aliquam et metus id erat vulputate egestas. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus.</p>
-        <p>Donec vel nisl nibh. Aenean quam tortor, tempus sit amet mattis dapibus, egestas tempor dui. Duis vestibulum
-            imperdiet risus pretium pretium. Nunc vitae porta ligula. Vestibulum sit amet nulla quam. Aenean lacinia,
-            ante vitae sodales sagittis, leo felis bibendum neque, mattis sagittis neque urna vel magna. Sed at sem
-            vitae lorem blandit feugiat.</p>
-        <p>Donec vel orci purus, ut ornare orci. Aenean rutrum pellentesque quam. Quisque gravida adipiscing augue, eget
-            commodo augue egestas varius. Integer volutpat, tellus porta tincidunt sodales, lacus est tempus odio,
-            fringilla blandit tortor lectus ut sem. Pellentesque nec sem lacus, sit amet consequat neque. Etiam varius
-            urna quis arcu cursus in consectetur dui tincidunt. Quisque arcu orci, lacinia eget pretium vel, iaculis
-            pellentesque nibh. Etiam cursus lacus eget neque viverra vestibulum. Aliquam erat volutpat. Duis pulvinar
-            tellus ut urna facilisis mollis. Maecenas ac pharetra dui. Pellentesque neque ante, luctus eget congue eget,
-            rhoncus vel mauris. Duis nisi magna, aliquet a convallis non, venenatis at nisl. Nunc at quam eu magna
-            malesuada dignissim. Duis bibendum iaculis felis, eu venenatis risus sodales non. In ligula mi, faucibus eu
-            tristique sed, vulputate rutrum dolor.</p>
+        <p><font face="Cinzel" color="" size="4">The site in the upper left corner says which page you are on.
+            To navigate through the site, use the navigation buttons in the top pinned menu.
+            To start taking tests of various levels, click on the corresponding button in the side menu on the left.
+            To determine your level, you need to pass the "Yourself" test, which is located on the HOME home page
+            After passing the test, you will be asked to save the result, for this you will need to register on our
+            website and log in.
+            There are special sections for this, such as: LOGIN AND REGISTER</font></p>
+        <p><font face="Cinzel" color="" size="4">The questions are based on the school-preschool program
+            For each question, you need to choose 1 answer option.
+            Also below will be listed sites with useful information that will help you in the learning process.
+        </font></p>
+        <p><font face="Cinzel" color="" size="4">If you have any questions or technical problems with the site, contact
+            one of the employees.
+            Their contacts are listed at the bottom on all pages of the site.</font></p>
+
 
         <figure>
-            <img src="{% static 'images/main.jpg' %}" width="675" height="200" alt="">
+            <img src="{% static 'images/helpt.jpg' %}" width="675" height="300" alt="">
         </figure>
 
         <h2>Useful links</h2>
         <ul>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
+            <li><font face="Cinzel" color="#5CCCCC" size="5"><a
+                    href="https://puzzle-english.com">Puzzle-english</a></font></li>
+            <li><font face="Cinzel" color="#5CCCCC" size="5"><a
+                    href="https://ru.duolingo.com">Duolingo-english</a></font></li>
+            <li><font face="Cinzel" color="#5CCCCC" size="5"><a
+                    href="https://skysmart.ru/articles/english/sajty-dlya-samostoyatelnogo-izucheniya-anglijskogo">Skysmart-english</a></font>
+            </li>
         </ul>
     </section>
 </div>
 <footer>
     <div id="footer">
         <div id="twitter">
-            <h3>TWITTER FEED</h3>
-            <time datetime="2012-10-23"><a href="#">5 july</a></time>
-            <p>In ultricies pellentesque massa a porta. Aliquam ipsum enim, hendrerit ut porta nec, ullamcorper et
-                nulla. In eget mi dui, sit amet scelerisque nunc. Aenean aug</p>
+            <h3>DISCLAIMER</h3>
+            <p><font face="Cinzel" color="white" size="3">This site was specially designed to gain experience in web
+                programming.Summer Practice 2022 KFU ITIS</font></p>
         </div>
         <div id="social">
-            <h3>SOCIAL NETWORKS</h3>
-            <a href="http://twitter.com/" class="social-icon twitter"></a>
-            <a href="http://facebook.com/" class="social-icon facebook"></a>
-            <a href="http://plus.google.com/" class="social-icon google-plus"></a>
-            <a href="http://vimeo.com/" class="social-icon-small vimeo"></a>
-            <a href="http://youtube.com/" class="social-icon-small youtube"></a>
-            <a href="http://flickr.com/" class="social-icon-small flickr"></a>
-            <a href="http://instagram.com/" class="social-icon-small instagram"></a>
-            <a href="/rss/" class="social-icon-small rss"></a>
+            <h3>SOCIAL NETWORK`S</h3>
+            <a href="https://vk.com/fantacyfanatic"><img src="{% static 'images/vk.png' %}" alt=" ">Artoym</a>
+            <a href="https://vk.com/id313094917"><img src="{% static 'images/vk.png' %}" alt=" ">Ilshat</a>
+            <a href="https://vk.com/ikutin99"><img src="{% static 'images/vk.png' %}" alt=" ">Ivan</a>
         </div>
         <div id="footer-logo">
-            <a href="/"><img src="{% static 'images/footer-logo.jpg' %}" alt="Whitesquare logo"></a>
-            <p>Copyright &copy; 2022 Whitesquare.</p>
+            <a href="/"><img src="{% static 'images/logo2t.jpg' %}" alt="logo"></a>
         </div>
     </div>
 </footer>
