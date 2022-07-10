@@ -10,4 +10,5 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('tests/', views.tests_page, name='tests_page'),
     path('tests/level-<int:level>/', views.tests_by_level, name='tests_by_level'),
+    path('tests/level-<int:level>/result', views.tests_by_level_result, name='tests_by_level_result'),
 ]
