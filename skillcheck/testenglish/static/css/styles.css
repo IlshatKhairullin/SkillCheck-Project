@@ -501,7 +501,7 @@ footer p {
 }
 
 #picture {
-    margin-left: 165px;
+    margin-left: 184px;
 }
 
 #footer-logo {
@@ -522,4 +522,29 @@ footer p {
 .join-text-r a {
 	color: #b2b2b2;
 }
+.button-test2 li {
+	display: block;
+	padding: 10px 45.9px;
+	margin-left: 73px;
+}
 
+.button-test2 li.active {
+	background: #29c5e6;
+	color: #fff;
+}
+
+.button-test2 a {
+	color: #b2b2b2;
+}
+
+.img-test {
+    margin-left: 184px;
+}
+
+figure-f {
+	display: inline-block;
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+	margin-left: 100px;
+}
