@@ -26,11 +26,12 @@ def test_yourself_result(request):
                     k += 1
                     break
         if k <= 6:
-            return HttpResponse(f'Your english level - Elementary. Количество правильных ответов - {k}/15')
+            return render(request, 'testenglish/Результат.html', {'questions': f'Your english level - Elementary. Количество правильных ответов - {k}/15'})
         elif 6 < k <= 11:
-            return HttpResponse(f'Your english level - Intermediate. Количество правильных ответов - {k}/15')
+            return render(request, 'testenglish/Результат.html', {'questions': f'Your english level - Intermediate. Количество правильных ответов - {k}/15'})
         else:
-            return HttpResponse(f'Your english level - Advanced. Количество правильных ответов - {k}/15')
+            return render(request, 'testenglish/Результат.html', {'questions': f'Your english level - Advanced. Количество правильных ответов - {k}/15'})
+
 
 
 def help_page(request):
@@ -71,7 +72,8 @@ def tests_by_level_result(request, level):
                 if i.correct_answer == j and order == i.order:
                     k += 1
                     break
-        return HttpResponse(f'Ваш результат - {k}/15')
+
+        return render(request,"testenglish/Результат.html",{'result':f'Ваш результат - {k}/15'})
 
     elif request.method == 'GET' and level == 2:
         k = 0
@@ -84,7 +86,7 @@ def tests_by_level_result(request, level):
                 if i.correct_answer == j and order == i.order:
                     k += 1
                     break
-        return HttpResponse(f'Ваш результат - {k}/15')
+        return render(request,"testenglish/Результат.html",{'result':f'Ваш результат - {k}/15'})
 
     elif request.method == 'GET' and level == 3:
         k = 0
@@ -97,7 +99,7 @@ def tests_by_level_result(request, level):
                 if i.correct_answer == j and order == i.order:
                     k += 1
                     break
-        return HttpResponse(f'Ваш результат - {k}/15')
+        return render(request,"testenglish/Результат.html",{'result':f'Ваш результат - {k}/15'})
 
 
 def pageNotFound(request, exception):
