@@ -329,7 +329,7 @@ footer p {
 
 .join-join li {
 	display: block;
-	padding: 10px 300px;
+	padding: 10px 243px;
 	margin-left: 73;
 }
 
@@ -379,7 +379,7 @@ footer p {
 
 .join-remind  {
 	display:block;
-	padding: 0px 260px;
+	padding: 0px 264px;
 	margin-left: 0
 }
 
@@ -393,7 +393,7 @@ footer p {
 
 .help-text {
     display:block;
-	padding: 0px 40px;
+	padding: 0px 39px;
 	margin-bottom: 0px;
 }
 .help-text .active {
@@ -462,7 +462,7 @@ footer p {
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    margin-left: 290px;
+    margin-left: 281px;
 }
 
 #reg {
