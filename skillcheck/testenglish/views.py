@@ -16,18 +16,21 @@ def main_test(request):
 def test_yourself_result(request):
     if request.method == 'GET':
         k = 0
+        order = 0
         questions = Question.objects.filter(order__lt=16)
+
         for j in dict(request.GET)['answer']:
+            order += 1
             for i in questions:
-                if i.correct_answer == j:
+                if i.correct_answer == j and order == i.order:
                     k += 1
                     break
-        if k <= 5:
-            return HttpResponse(f'Your english level - Elementary. Количество правильных ответов - {k}')
-        elif 5 < k <= 10:
-            return HttpResponse(f'Your english level - Intermediate. Количество правильных ответов - {k}')
+        if k <= 6:
+            return HttpResponse(f'Your english level - Elementary. Количество правильных ответов - {k}/15')
+        elif 6 < k <= 11:
+            return HttpResponse(f'Your english level - Intermediate. Количество правильных ответов - {k}/15')
         else:
-            return HttpResponse(f'Your english level - Advanced. Количество правильных ответов - {k}')
+            return HttpResponse(f'Your english level - Advanced. Количество правильных ответов - {k}/15')
 
 
 def help_page(request):
