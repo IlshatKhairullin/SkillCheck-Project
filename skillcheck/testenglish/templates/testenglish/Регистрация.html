@@ -13,7 +13,7 @@
 <body>
 <div id="wrapper">
     <header>
-        <a href="/"><img src="{% static 'images/footer-logo.jpg' %}" alt="Whitesquare logo"></a>
+        <a href="/"><img src="{% static 'images/logo1.png' %}" alt="logo"></a>
 
     </header>
     <nav>
@@ -21,23 +21,30 @@
             <li class="active">MENU</li>
             <li><a href="{% url 'main_page' %}">HOME</a></li>
             <li><a href="{% url 'help_page' %}">HELP</a></li>
-            <li><a href="{% url 'tests_page' %}">TESTS</a></li>
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'tests_page' %}">TEST`S</a></li>
+            <li><a href="{% url 'login' %}">LOGIN</a></li>
+            <li><a href="{% url 'register' %}">REGISTER</a></li>
         </ul>
     </nav>
     <div id="heading">
-        <h1>Register page</h1>
+        <h1>REGISTER</h1>
     </div>
     <aside>
         <nav>
             <ul class="aside-menu">
-                <li class="active">Links on ours Tests</li>
-                <li><a href="{% url 'tests_by_level' level=1 %}">Link on test 1</a></li>
-                <li><a href="{% url 'tests_by_level' level=2 %}">Link on test 2</a></li>
-                <li><a href="{% url 'tests_by_level' level=3 %}">Link on test 3</a></li>
+                <li class="active"><font face="Cinzel" size="3">Link`s on ours Test`s</font></li>
+                <li><font face="Cinzel" size="3"><a href="{% url 'tests_by_level' level=1 %}">A LEVEL TEST</a></font>
+                </li>
+                <li><font face="Cinzel" size="3"><a href="{% url 'tests_by_level' level=2 %}">B LEVEL TEST</a></font>
+                </li>
+                <li><font face="Cinzel" size="3"><a href="{% url 'tests_by_level' level=3 %}">C LEVEL TEST</a></font>
+                </li>
             </ul>
         </nav>
+        <h2>REGISTER YOUR ACCOUNT</h2>
+        <p>
+            <img src="{% static 'images/morf.jpg' %}" width="230" height="180" alt="Our offices">
+        </p>
     </aside>
     <section>
         <h2>Registration</h2>
@@ -45,28 +52,30 @@
         <div>
             <nav>
                 <ul class="join-reg">
-                    <li>@Регистрация@</li>
+                    <li><font face="Cinzel" color="#3F92D2" size="4">Registration</font></li>
                 </ul>
-                <ul class="join-text">
-                    <li>Создай свой аккаунт Skill-Check !</li>
+                <ul class="join-text-r">
+                    <li><font face="Cinzel" color="#3F92D2" size="4">Create your Skill-Check account!</font></li>
                 </ul>
                 <form action="#" method="post">
-                    <input class="input-login" placeholder="     Введите свой логин " required name="login" type="text">
+                    <input class="input-login" placeholder="           Input your login " required name="login"
+                           type="text">
                     <br/>
                     <br/>
-                    <input class="input-mail" placeholder="     Введите свой email " required name="email" type="email">
+                    <input class="input-mail" placeholder="           Input your email " required name="email"
+                           type="email">
                     <br/>
                     <br/>
-                    <input class="input-password" placeholder="     Введите свой пароль " required name="password"
+                    <input class="input-password" placeholder="        Input your password " required name="password"
                            type="password">
                     <br/>
                     <br/>
-                    <input class="input-password" placeholder="     Повторите свой пароль " required name="password"
+                    <input class="input-password" placeholder="      Repeat your password " required name="password"
                            type="password">
                     <br/>
                     <br/>
                     <br/>
-                    <input id="reg" class="input-reg" type="submit" value="Регистрация" name="Регистрация">
+                    <input id="reg" class="input-reg" type="submit" value="Registration" name="Регистрация">
                     <br/>
                     <br/>
                     <br/>
@@ -94,25 +103,18 @@
 <footer>
     <div id="footer">
         <div id="twitter">
-            <h3>TWITTER FEED</h3>
-            <time datetime="2012-10-23"><a href="#">5 july</a></time>
-            <p>In ultricies pellentesque massa a porta. Aliquam ipsum enim, hendrerit ut porta nec, ullamcorper et
-                nulla. In eget mi dui, sit amet scelerisque nunc. Aenean aug</p>
+            <h3>DISCLAIMER</h3>
+            <p><font face="Cinzel" color="white" size="3">This site was specially designed to gain experience in web
+                programming.Summer Practice 2022 KFU ITIS</font></p>
         </div>
         <div id="social">
-            <h3>SOCIAL NETWORKS</h3>
-            <a href="http://twitter.com/" class="social-icon twitter"></a>
-            <a href="http://facebook.com/" class="social-icon facebook"></a>
-            <a href="http://plus.google.com/" class="social-icon google-plus"></a>
-            <a href="http://vimeo.com/" class="social-icon-small vimeo"></a>
-            <a href="http://youtube.com/" class="social-icon-small youtube"></a>
-            <a href="http://flickr.com/" class="social-icon-small flickr"></a>
-            <a href="http://instagram.com/" class="social-icon-small instagram"></a>
-            <a href="/rss/" class="social-icon-small rss"></a>
+            <h3>SOCIAL NETWORK`S</h3>
+            <a href="https://vk.com/fantacyfanatic"><img src="{% static 'images/vk.png' %}" alt=" ">Artoym</a>
+            <a href="https://vk.com/id313094917"><img src="{% static 'images/vk.png' %}" alt=" ">Ilshat</a>
+            <a href="https://vk.com/ikutin99"><img src="{% static 'images/vk.png' %}" alt=" ">Ivan</a>
         </div>
         <div id="footer-logo">
-            <a href="/"><img src="{% static 'images/footer-logo.jpg' %}" alt="Whitesquare logo"></a>
-            <p>Copyright &copy; 2022 Whitesquare.</p>
+            <a href="/"><img src="{% static 'images/logo2t.jpg' %}" alt="logo"></a>
         </div>
     </div>
 </footer>

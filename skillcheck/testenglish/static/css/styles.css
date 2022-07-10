@@ -419,7 +419,7 @@ footer p {
 
 .join-reg li {
 	display: block;
-	padding: 10px 283px;
+	padding: 10px 213px;
 	margin-left: 73;
 }
 
@@ -472,7 +472,7 @@ footer p {
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    margin-left: 265px;
+    margin-left: 273px;
 }
 
 #quote {
@@ -506,5 +506,20 @@ footer p {
 
 #footer-logo {
     margin: 0;
+}
+
+.join-text-r li {
+	display:block;
+	padding: 10px 214px;
+	margin-left: 0
+}
+
+.join-text-r li.active {
+	background: #29c5e6;
+	color: #fff;
+}
+
+.join-text-r a {
+	color: #b2b2b2;
 }
 
