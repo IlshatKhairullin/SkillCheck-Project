@@ -476,7 +476,7 @@ footer p {
 }
 
 #quote {
-    margin-left: 260px;
+    margin-left: 267px;
 }
 #end-test {
     padding:10px 30px;
@@ -485,7 +485,7 @@ footer p {
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    margin-left: 112px;
+    margin-left: 236px;
 }
 .input-endt {
     display:block;
@@ -547,4 +547,7 @@ figure-f {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;
 	margin-left: 100px;
+}
+#quote-1 {
+    margin-left: 217px;
 }
