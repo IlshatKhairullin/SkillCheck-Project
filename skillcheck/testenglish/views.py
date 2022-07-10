@@ -59,5 +59,46 @@ def tests_by_level(request, level):
         return render(request, 'testenglish/Test-3.html', {'questions': questions})
 
 
+def tests_by_level_result(request, level):
+    if request.method == 'GET' and level == 1:
+        k = 0
+        order = 0
+        questions = Question.objects.filter(category=1)
+
+        for j in dict(request.GET)['answer']:
+            order += 1
+            for i in questions:
+                if i.correct_answer == j and order == i.order:
+                    k += 1
+                    break
+        return HttpResponse(f'Ваш результат - {k}/15')
+
+    elif request.method == 'GET' and level == 2:
+        k = 0
+        order = 15
+        questions = Question.objects.filter(category=2)
+
+        for j in dict(request.GET)['answer']:
+            order += 1
+            for i in questions:
+                if i.correct_answer == j and order == i.order:
+                    k += 1
+                    break
+        return HttpResponse(f'Ваш результат - {k}/15')
+
+    elif request.method == 'GET' and level == 3:
+        k = 0
+        order = 29
+        questions = Question.objects.filter(category=3)
+
+        for j in dict(request.GET)['answer']:
+            order += 1
+            for i in questions:
+                if i.correct_answer == j and order == i.order:
+                    k += 1
+                    break
+        return HttpResponse(f'Ваш результат - {k}/15')
+
+
 def pageNotFound(request, exception):
     return render(request, 'testenglish/NotFound.html')
