@@ -10,7 +10,7 @@ class Test(models.Model):
 
 
 class Question(models.Model):
-    test = models.ForeignKey(Test, on_delete=models.PROTECT, null=True)
+    test = models.ForeignKey(Test, on_delete=models.PROTECT, null=True, blank=True)
     text = models.TextField(blank=True)
     answer1 = models.CharField(max_length=255)
     answer2 = models.CharField(max_length=255)
@@ -19,6 +19,9 @@ class Question(models.Model):
     correct_answer = models.CharField(max_length=255)
     order = models.IntegerField(null=True)
     category = models.CharField(max_length=255, null=True)
+
+    def save_information(self):
+        self.save()
 
 
 class User(models.Model):
