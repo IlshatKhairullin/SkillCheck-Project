@@ -1,10 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import *
 
 
 def main_page(request):
-    # тут будем доставать с бд тест и посылать отфильтрованную инфу в html
     return render(request, 'testenglish/Главная.html', {})
 
 
