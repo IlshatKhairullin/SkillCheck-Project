@@ -26,6 +26,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []  # '127.0.0.1'
 
+AUTH_USER_MODEL = 'testenglish.User'
+
+LOGIN_REDIRECT_URL = '/home'
+LOGOUT_REDIRECT_URL = '/home'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Application definition
 
 INSTALLED_APPS = [
