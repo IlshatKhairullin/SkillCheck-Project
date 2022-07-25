@@ -10,15 +10,6 @@ img {
 	border: 0;
 }
 
-input[type="text"] {
-	background-color: #f3f3f3;
-	border: 1px solid #e7e7e7;
-	height: 30px;
-	color: #b2b2b2;
-	padding: 0 10px;
-	vertical-align: top;
-}
-
 button {
 	color: #fff;
 	background-color: #29c5e6;
@@ -85,9 +76,6 @@ form[name="search"] {
 	float: right;
 }
 
-footer {
-	background-color: #7e7e7e;
-}
 
 nav a {
 	text-decoration: none;
@@ -102,6 +90,28 @@ nav li {
 	list-style-position: inside;
 	font: 14px 'Oswald', sans-serif;
 	padding: 10px;
+}
+
+#content-main div {
+	font-size: 20px;
+	color: rebeccapurple;
+}
+
+.form-input {
+    width: 300px;
+    font-size: 16px;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    color: #CC0000;
 }
 
 .top-menu li {
@@ -212,6 +222,10 @@ figure figcaption span {
 }
 
 footer {
+	background-color: #7e7e7e;
+}
+
+footer {
 	background: #7e7e7e;
 	color: #dbdbdb;
 	font-size: 11px;
@@ -221,7 +235,7 @@ footer {
 	max-width: 960px;
 	margin: auto;
 	padding: 10px 0;
-	height: 90px;
+	height: 105px;
 }
 
 footer h3 {
@@ -231,17 +245,21 @@ footer h3 {
 	margin: 0 0 10px 0;
 }
 
-footer a {
-	color: #dbdbdb;
+#footer-logo {
+	float: right;
+	margin-top: 20px;
+	font-size: 10px;
+	text-align: right;
+}
+
+#footer-logo {
+    margin: 0;
 }
 
 #twitter time a {
 	color: #b4aeae;
 }
 
-footer p {
-	margin: 5px 0;
-}
 
 #twitter {
 	float: left;
@@ -284,12 +302,6 @@ footer p {
 	width: 130px;
 }
 
-#footer-logo {
-	float: right;
-	margin-top: 20px;
-	font-size: 10px;
-	text-align: right;
-}
 
 .top-menu li {
 	display: inline-block;
@@ -487,6 +499,19 @@ footer p {
     border-radius: 5px;
     margin-left: 236px;
 }
+
+.input-button-register {
+    display:block;
+	padding: 0px 40px;
+	margin-left: 255px;
+	cursor:pointer;
+}
+
+.input-button-enter {
+	margin-left: 15px;
+	cursor:pointer;
+}
+
 .input-endt {
     display:block;
 	padding: 0px 40px;
@@ -504,9 +529,6 @@ footer p {
     margin-left: 184px;
 }
 
-#footer-logo {
-    margin: 0;
-}
 
 .join-text-r li {
 	display:block;
